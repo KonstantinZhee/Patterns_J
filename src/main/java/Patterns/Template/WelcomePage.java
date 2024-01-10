@@ -1,4 +1,4 @@
-package Pattern.Template;
+package Patterns.Template;
 
 public class WelcomePage extends TemplatePage {
 

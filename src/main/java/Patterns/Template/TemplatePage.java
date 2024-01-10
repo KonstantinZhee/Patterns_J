@@ -1,4 +1,4 @@
-package Pattern.Template;
+package Patterns.Template;
 
 public abstract class TemplatePage {
     public void showPage() {

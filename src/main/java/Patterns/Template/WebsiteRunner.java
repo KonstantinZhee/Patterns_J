@@ -1,4 +1,4 @@
-package Pattern.Template;
+package Patterns.Template;
 
 public class WebsiteRunner {
     public static void main(String[] args) {
