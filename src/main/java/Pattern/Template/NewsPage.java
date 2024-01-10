@@ -1,9 +1,9 @@
 package Pattern.Template;
 
-public class NewsPage {
-    public void showPage(){
-        System.out.println("Header");
+public class NewsPage extends TemplatePage {
+
+    @Override
+    public void showContext() {
         System.out.println("NEWS");
-        System.out.println("Footer");
     }
 }
