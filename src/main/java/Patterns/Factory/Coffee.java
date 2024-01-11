@@ -1,10 +1,11 @@
 package Patterns.Factory;
 
-public class Coffee {
+public abstract class Coffee {
     public void grindCoffee(){
     }
     public void makeCoffee(){
     }
     public void pourIntoCup(){
     }
+    public abstract void sayCoffeeType();
 }
