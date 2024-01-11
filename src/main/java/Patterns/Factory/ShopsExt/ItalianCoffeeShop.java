@@ -1,6 +1,5 @@
 package Patterns.Factory.ShopsExt;
 
-import Patterns.Factory.CoffeType;
 import Patterns.Factory.Coffee;
 import Patterns.Factory.CoffeeExt.ItalianAmericano;
 import Patterns.Factory.CoffeeExt.ItalianCappuccino;
