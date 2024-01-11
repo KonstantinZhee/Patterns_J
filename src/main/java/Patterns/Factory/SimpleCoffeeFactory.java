@@ -1,5 +1,9 @@
 package Patterns.Factory;
 
+import Patterns.Factory.CoffeeExt.Americano;
+import Patterns.Factory.CoffeeExt.Cappuccino;
+import Patterns.Factory.CoffeeExt.Latte;
+
 public class SimpleCoffeeFactory {
     public Coffee createCoffee(final CoffeType type) {
         Coffee coffee = null;

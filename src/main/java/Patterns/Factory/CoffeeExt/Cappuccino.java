@@ -1,4 +1,6 @@
-package Patterns.Factory;
+package Patterns.Factory.CoffeeExt;
+
+import Patterns.Factory.Coffee;
 
 public class Cappuccino extends Coffee {
     @Override
