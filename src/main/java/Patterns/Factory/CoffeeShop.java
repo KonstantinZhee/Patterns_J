@@ -21,7 +21,7 @@ public class CoffeeShop {
         }
     }
     private CoffeType enterCoffee( int number){
-        CoffeType coffeType = null;
+        CoffeType coffeType;
         switch (number) {
             case 1 -> coffeType = CoffeType.AMERICANO;
             case 2 -> coffeType = CoffeType.CAPPUCCINO;
