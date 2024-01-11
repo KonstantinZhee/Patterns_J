@@ -1,4 +1,4 @@
-package Patterns.Factory.CoffeExtenders;
+package Patterns.Factory;
 
 import Patterns.Factory.Coffee;
 
