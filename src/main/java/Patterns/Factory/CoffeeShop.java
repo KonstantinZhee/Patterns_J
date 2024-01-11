@@ -23,15 +23,10 @@ public class CoffeeShop {
     private CoffeType enterCoffee( int number){
         CoffeType coffeType = null;
         switch (number) {
-            case 1 -> {
-               coffeType = CoffeType.AMERICANO;
-            }
-            case 2 -> {
-                coffeType = CoffeType.CAPPUCCINO;
-            }
-            case 3 -> {
-                coffeType = CoffeType.LATTE;
-            }
+            case 1 -> coffeType = CoffeType.AMERICANO;
+            case 2 -> coffeType = CoffeType.CAPPUCCINO;
+            case 3 -> coffeType = CoffeType.LATTE;
+            default -> throw new IllegalStateException("Unexpected value: " + number);
         }
         return coffeType;
     }
