@@ -3,6 +3,7 @@ package Patterns.FactoryMethod;
 import Patterns.FactoryMethod.ShopsExt.ItalianCoffeeShop;
 import Patterns.FactoryMethod.ShopsExt.TurkishCoffeShop;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class MainCoffeeShop {
@@ -16,6 +17,8 @@ public class MainCoffeeShop {
             } catch (NumberFormatException  e) {
                 System.out.println("Enter number plz!");
                 continue;
+            } catch (NoSuchElementException | IllegalStateException e) {
+                System.out.println("Перезапусти программу");
             }
 
             switch (number) {
