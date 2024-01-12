@@ -8,7 +8,7 @@ public abstract class CoffeeShop {
             coffee.makeCoffee();
             coffee.pourIntoCup();
             coffee.sayCoffeeType();
-            System.out.println("TAKE YOUR F**ing COFFEE, PLZ");
+            System.out.println("Возьмите ваш кофе, пожалуйста!");
     }
     public abstract Coffee createCoffee(int number);
 }
