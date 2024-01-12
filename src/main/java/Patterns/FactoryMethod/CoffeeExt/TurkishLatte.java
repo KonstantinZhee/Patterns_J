@@ -1,6 +1,6 @@
-package Patterns.Factory.CoffeeExt;
+package Patterns.FactoryMethod.CoffeeExt;
 
-import Patterns.Factory.Coffee;
+import Patterns.FactoryMethod.Coffee;
 
 public class TurkishLatte extends Coffee {
     @Override

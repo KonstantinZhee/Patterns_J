@@ -1,4 +1,4 @@
-package Patterns.Factory;
+package Patterns.FactoryMethod;
 
 public abstract class Coffee {
     public void grindCoffee(){

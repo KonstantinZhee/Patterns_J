@@ -1,10 +1,10 @@
-package Patterns.Factory.ShopsExt;
+package Patterns.FactoryMethod.ShopsExt;
 
-import Patterns.Factory.Coffee;
-import Patterns.Factory.CoffeeExt.ItalianAmericano;
-import Patterns.Factory.CoffeeExt.ItalianCappuccino;
-import Patterns.Factory.CoffeeExt.ItalianLatte;
-import Patterns.Factory.CoffeeShop;
+import Patterns.FactoryMethod.Coffee;
+import Patterns.FactoryMethod.CoffeeExt.ItalianAmericano;
+import Patterns.FactoryMethod.CoffeeExt.ItalianCappuccino;
+import Patterns.FactoryMethod.CoffeeExt.ItalianLatte;
+import Patterns.FactoryMethod.CoffeeShop;
 
 public class ItalianCoffeeShop extends CoffeeShop {
 

@@ -1,10 +1,10 @@
-package Patterns.Factory.ShopsExt;
+package Patterns.FactoryMethod.ShopsExt;
 
-import Patterns.Factory.Coffee;
-import Patterns.Factory.CoffeeExt.TurkishAmericano;
-import Patterns.Factory.CoffeeExt.TurkishCappuccino;
-import Patterns.Factory.CoffeeExt.TurkishLatte;
-import Patterns.Factory.CoffeeShop;
+import Patterns.FactoryMethod.Coffee;
+import Patterns.FactoryMethod.CoffeeExt.TurkishAmericano;
+import Patterns.FactoryMethod.CoffeeExt.TurkishCappuccino;
+import Patterns.FactoryMethod.CoffeeExt.TurkishLatte;
+import Patterns.FactoryMethod.CoffeeShop;
 
 public class TurkishCoffeShop extends CoffeeShop {
     @Override

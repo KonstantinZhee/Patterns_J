@@ -1,7 +1,7 @@
-package Patterns.Factory;
+package Patterns.FactoryMethod;
 
-import Patterns.Factory.ShopsExt.ItalianCoffeeShop;
-import Patterns.Factory.ShopsExt.TurkishCoffeShop;
+import Patterns.FactoryMethod.ShopsExt.ItalianCoffeeShop;
+import Patterns.FactoryMethod.ShopsExt.TurkishCoffeShop;
 
 import java.util.Scanner;
 
@@ -10,7 +10,14 @@ public class MainCoffeeShop {
         Scanner scanner = new Scanner(System.in);
         CoffeeShop coffeeShop;
         while (scanner.hasNext()) {
-            int number = scanner.nextInt();
+            int number = 0;
+            try {
+                number = Integer.parseInt(scanner.next());
+            } catch (NumberFormatException  e) {
+                System.out.println("Enter number plz!");
+                continue;
+            }
+
             switch (number) {
                 case 1, 2, 3 -> {
                     coffeeShop = new ItalianCoffeeShop();
@@ -20,7 +27,7 @@ public class MainCoffeeShop {
                     coffeeShop = new TurkishCoffeShop();
                     coffeeShop.orderCoffee(number);
                 }
-                default -> throw new IllegalStateException("Unexpected value: " + number);
+                default -> System.out.println("Unexpected value: " + number);
             }
         }
     }
