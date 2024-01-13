@@ -1,8 +1,6 @@
 package Patterns.FactoryAbstract.Factories;
 
-import Patterns.FactoryAbstract.CoffeProducts.Americano;
 import Patterns.FactoryAbstract.CoffeProducts.AmericanoTurkish;
-import Patterns.FactoryAbstract.CoffeProducts.Cappuccino;
 import Patterns.FactoryAbstract.CoffeProducts.CappuccinoTurkish;
 import Patterns.FactoryAbstract.CoffeProducts.Coffee;
 
