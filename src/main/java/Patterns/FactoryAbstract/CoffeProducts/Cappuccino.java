@@ -1,4 +1,4 @@
 package Patterns.FactoryAbstract.CoffeProducts;
 
-public interface Cappuccino {
+public interface Cappuccino extends Smellable {
 }

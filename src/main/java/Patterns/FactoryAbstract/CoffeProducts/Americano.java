@@ -1,5 +1,4 @@
 package Patterns.FactoryAbstract.CoffeProducts;
 
-public interface Americano {
-
+public interface Americano extends Smellable{
 }

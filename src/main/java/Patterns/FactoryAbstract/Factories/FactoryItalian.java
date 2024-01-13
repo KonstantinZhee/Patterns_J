@@ -4,15 +4,16 @@ import Patterns.FactoryAbstract.CoffeProducts.Americano;
 import Patterns.FactoryAbstract.CoffeProducts.AmericanoItalian;
 import Patterns.FactoryAbstract.CoffeProducts.Cappuccino;
 import Patterns.FactoryAbstract.CoffeProducts.CappuccinoItalian;
+import Patterns.FactoryAbstract.CoffeProducts.Coffee;
 
 public class FactoryItalian implements FactoryCoffee{
     @Override
-    public Americano createCoffee() {
+    public Coffee createAmericano() {
         return new AmericanoItalian();
     }
 
     @Override
-    public Cappuccino createCappuccino() {
+    public Coffee createCappuccino() {
         return new CappuccinoItalian();
     }
 }
