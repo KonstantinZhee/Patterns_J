@@ -1,7 +1,6 @@
 package Patterns.FactoryMethod;
 
 public abstract class CoffeeShop {
-
     public void orderCoffee (int number) {
         Coffee coffee = createCoffee(number);
             coffee.grindCoffee();

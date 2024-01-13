@@ -1,13 +1,10 @@
 package Patterns.FactoryMethod.ShopsExt;
-
 import Patterns.FactoryMethod.Coffee;
 import Patterns.FactoryMethod.CoffeeExt.ItalianAmericano;
 import Patterns.FactoryMethod.CoffeeExt.ItalianCappuccino;
 import Patterns.FactoryMethod.CoffeeExt.ItalianLatte;
 import Patterns.FactoryMethod.CoffeeShop;
-
 public class ItalianCoffeeShop extends CoffeeShop {
-
     @Override
     public Coffee createCoffee(int number) {
         Coffee coffee;

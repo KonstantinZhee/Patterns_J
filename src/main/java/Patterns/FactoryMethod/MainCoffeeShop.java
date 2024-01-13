@@ -1,11 +1,8 @@
 package Patterns.FactoryMethod;
-
 import Patterns.FactoryMethod.ShopsExt.ItalianCoffeeShop;
 import Patterns.FactoryMethod.ShopsExt.TurkishCoffeeShop;
-
 import java.util.NoSuchElementException;
 import java.util.Scanner;
-
 public class MainCoffeeShop {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +17,6 @@ public class MainCoffeeShop {
             } catch (NoSuchElementException | IllegalStateException e) {
                 System.out.println("Перезапусти программу");
             }
-
             switch (number) {
                 case 1, 2, 3 -> {
                     coffeeShop = new ItalianCoffeeShop();
