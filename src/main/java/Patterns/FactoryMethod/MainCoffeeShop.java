@@ -1,7 +1,7 @@
 package Patterns.FactoryMethod;
 
 import Patterns.FactoryMethod.ShopsExt.ItalianCoffeeShop;
-import Patterns.FactoryMethod.ShopsExt.TurkishCoffeShop;
+import Patterns.FactoryMethod.ShopsExt.TurkishCoffeeShop;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -27,7 +27,7 @@ public class MainCoffeeShop {
                     coffeeShop.orderCoffee(number);
                 }
                 case 4, 5, 6 -> {
-                    coffeeShop = new TurkishCoffeShop();
+                    coffeeShop = new TurkishCoffeeShop();
                     coffeeShop.orderCoffee(number);
                 }
                 default -> System.out.println("Unexpected value: " + number);

@@ -6,7 +6,7 @@ import Patterns.FactoryMethod.CoffeeExt.TurkishCappuccino;
 import Patterns.FactoryMethod.CoffeeExt.TurkishLatte;
 import Patterns.FactoryMethod.CoffeeShop;
 
-public class TurkishCoffeShop extends CoffeeShop {
+public class TurkishCoffeeShop extends CoffeeShop {
     @Override
     public Coffee createCoffee(int number) {
         Coffee coffee;

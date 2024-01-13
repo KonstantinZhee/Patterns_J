@@ -17,7 +17,7 @@ public class Service {
             System.out.println(Constants.QUESTION_SECOND);
             int coffeeType = readAnswer();
             Optional<CoffeeMaker> coffeeMakerOptional = getCoffeeMaker(coffeeShop);
-            if( coffeeMakerOptional.isPresent()) {
+            if(coffeeMakerOptional.isPresent()) {
                 CoffeeMaker coffeeMaker = coffeeMakerOptional.get();
                 Coffee coffee = null;
                 switch (coffeeType) {
@@ -60,6 +60,8 @@ public class Service {
             }
             if (number == 1 || number == 2) {
                 break;
+            } else {
+                System.out.println("Введите, 1 или 2.");
             }
         }
         return number;
