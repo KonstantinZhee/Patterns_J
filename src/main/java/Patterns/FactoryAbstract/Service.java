@@ -5,6 +5,7 @@ import Patterns.FactoryAbstract.Factories.FactoryItalian;
 import Patterns.FactoryAbstract.Factories.FactoryTurkish;
 
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class Service {
@@ -15,31 +16,34 @@ public class Service {
             int coffeeShop = readAnswer();
             System.out.println(Constants.QUESTION_SECOND);
             int coffeeType = readAnswer();
-            CoffeeMaker coffeeMaker = getCoffeeMaker(coffeeShop);
-            Coffee coffee = null;
-            switch (coffeeType) {
-                case 1 -> coffee = coffeeMaker.makeCappuccino();
-                case 2 -> coffee = coffeeMaker.makeAmericano();
-                default -> System.out.println("Нет такого типа кофе.");
-            }
-            if (coffee != null) {
-                coffee.makeCoffee();
-                coffee.smell();
+            Optional<CoffeeMaker> coffeeMakerOptional = getCoffeeMaker(coffeeShop);
+            if( coffeeMakerOptional.isPresent()) {
+                CoffeeMaker coffeeMaker = coffeeMakerOptional.get();
+                Coffee coffee = null;
+                switch (coffeeType) {
+                    case 1 -> coffee = coffeeMaker.makeCappuccino();
+                    case 2 -> coffee = coffeeMaker.makeAmericano();
+                    default -> System.out.println("Нет такого типа кофе.");
+                }
+                if (coffee != null) {
+                    coffee.makeCoffee();
+                    coffee.smell();
+                }
             }
         }
     }
 
-    private CoffeeMaker getCoffeeMaker(int coffeeShop) {
+    private Optional<CoffeeMaker> getCoffeeMaker(int coffeeShop) {
         switch (coffeeShop){
             case 1 -> {
-                return new CoffeeMaker(new FactoryItalian());
+                return Optional.of(new CoffeeMaker(new FactoryItalian()));
             }
             case 2 -> {
-                return new CoffeeMaker(new FactoryTurkish());
+                return Optional.of(new CoffeeMaker(new FactoryTurkish()));
             }
             default -> System.out.println("Нет такой фабрики кофе.");
         }
-        return null;
+        return Optional.empty();
     }
 
     private int readAnswer() {
