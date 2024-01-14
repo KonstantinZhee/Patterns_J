@@ -1,19 +1,15 @@
 package Patterns.Pool.ObjectPool;
 
-public interface Pool<T> {
+import Patterns.Pool.Object.NameGettable;
 
-    /*
-     * @return one of the pooled objects.
-     */
+public interface Pool <T extends NameGettable> {
+
+    //Взять ресурс из пула
     T get();
 
-    /*
-     * @param object T to be return back to pool
-     */
+    //Возврат дорогого ресурса в пул
     void release(T object);
 
-    /*
-     * Shuts down the pool. Should release all resources.
-     */
+    //Отключить пул (пропиши отключение ресурсов)
     void shutdown();
 }
