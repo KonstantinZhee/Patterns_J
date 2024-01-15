@@ -33,10 +33,8 @@ public abstract class ObjectPool<T extends NameGettable> implements Pool<T>, Obj
 
     @Override
     public T get() {
-
         if (!shutdown) {
             T t = null;
-
             try {
                 t = objects.take();
                 System.out.println("Забрали ресурс из очереди:\t" + t.getName());
@@ -58,9 +56,6 @@ public abstract class ObjectPool<T extends NameGettable> implements Pool<T>, Obj
         }
     }
 
-    //For simplicity of this example I only remove the objects from the pool.
-    //In real life you might need to release the memory too. e.g.
-    //if is a database connection pool, you need to close the connection before remove the object from the pool.
     @Override
     public void shutdown() {
         System.out.println("Удаляем все ресурсы из пула. (не забываем закрыть ресурсы).");
