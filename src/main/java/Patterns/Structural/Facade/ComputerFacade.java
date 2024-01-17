@@ -5,11 +5,11 @@ import Patterns.Structural.Facade.SubSystem.Proz;
 import Patterns.Structural.Facade.SubSystem.Video_Card;
 
 public class ComputerFacade {
-    private Video_Card video_card;
-    private Proz proz;
-    private Mather mather;
+    private final Video_Card video_card;
+    private final Proz proz;
+    private final Mather mather;
 
-    public ComputerFacade(Video_Card video_card, Proz proz, Mather mather) {
+    public ComputerFacade(final Video_Card video_card, final Proz proz, final Mather mather) {
         this.video_card = video_card;
         this.proz = proz;
         this.mather = mather;
