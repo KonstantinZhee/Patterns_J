@@ -1,11 +1,12 @@
 package Patterns.Structural.Proxy.Example.Protection_proxy;
 
-import Structural.Proxy.Example.Protection_proxy.Account.Users.Guest;
-import Structural.Proxy.Example.Protection_proxy.Account.Users.IUser;
-import Structural.Proxy.Example.Protection_proxy.Account.Users.Owner;
-import Structural.Proxy.Example.Protection_proxy.Account.Users.User;
+import Patterns.Structural.Proxy.Example.Protection_proxy.Account.Users.Guest;
+import Patterns.Structural.Proxy.Example.Protection_proxy.Account.Users.IUser;
+import Patterns.Structural.Proxy.Example.Protection_proxy.Account.Users.Owner;
+import Patterns.Structural.Proxy.Example.Protection_proxy.Account.Users.User;
 
 import java.lang.reflect.Proxy;
+import java.lang.reflect.UndeclaredThrowableException;
 
 public class Ex {
 
@@ -18,7 +19,6 @@ public class Ex {
     IUser vlad = new User("Vlad", "Gay");
     IUser dima = getGuestProxy(vlad);
     vlad = getOwnerProxy(vlad);
-
     //!!! Be careful, do not wrap up Proxy in Proxy
 
     /*
@@ -36,10 +36,9 @@ public class Ex {
     System.out.println(vlad.toString());
     try {
       vlad.upRang();  //Can't
-
       dima.setStatus("loves Dima");  //Can't
-    } catch (Exception e) {
-      System.out.println("You need to have privileges");
+    } catch (RuntimeException e) {
+      System.out.println(e.getMessage());
     }
 
     dima.upRang();
@@ -56,9 +55,9 @@ public class Ex {
   private IUser getOwnerProxy(IUser user) {
 
     return (IUser) Proxy.newProxyInstance(
-      user.getClass().getClassLoader(),
-      user.getClass().getInterfaces(),  //get All Interfaces which need implement
-      new Owner(user));
+            user.getClass().getClassLoader(),
+            user.getClass().getInterfaces(),
+            new Owner(user));
   }
 
   private IUser getGuestProxy(IUser user) {

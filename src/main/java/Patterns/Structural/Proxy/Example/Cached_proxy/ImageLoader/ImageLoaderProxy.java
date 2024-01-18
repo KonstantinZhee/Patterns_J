@@ -1,6 +1,6 @@
 package Patterns.Structural.Proxy.Example.Cached_proxy.ImageLoader;
 
-import Structural.Proxy.Example.Cached_proxy.Object.Image;
+import Patterns.Structural.Proxy.Example.Cached_proxy.Object.Image;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ import java.util.Map;
 public class ImageLoaderProxy implements ImageLoader {
 
   private Map<String, Image> cache = new HashMap<>();
-  private ImageLoaderClass imageLoaderClass;
+  private final ImageLoaderClass imageLoaderClass;
 
   //We can also send through constructor
   public ImageLoaderProxy(ImageLoaderClass imageLoaderClass) {

@@ -14,18 +14,17 @@ public class Owner implements InvocationHandler {
   }
 
   @Override
-  public Object invoke(Object proxy, Method method, Object[] args)
-    throws IllegalAccessException {
-    try {
-      if (method.getName().startsWith("get") || method.getName().startsWith("set") || method
-        .getName().equals("toString")) {
-        return method.invoke(user, args);
+  public Object invoke(Object proxy, Method method, Object[] args) throws RuntimeException {
+      if (method.getName().startsWith("get") || method.getName().startsWith("set") ||
+              method.getName().equals("toString")) {
+          try {
+              return method.invoke(user, args);
+          } catch (IllegalAccessException | InvocationTargetException e) {
+              throw new RuntimeException("InvocationTargetException", e);
+          }
       } else if (method.getName().equals("upRang")) {
-        throw new IllegalAccessException("You can't up rang");
+        throw new RuntimeException("You can't up rang");
       }
-    } catch (InvocationTargetException e) {
-      e.printStackTrace();
-    }
     //When we invoke another method, do nothing
     return null;
   }

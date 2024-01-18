@@ -14,18 +14,17 @@ public class Guest implements InvocationHandler {
   }
 
   @Override
-  public Object invoke(Object proxy, Method method, Object[] args)
-    throws IllegalAccessException {
-    try {
+  public Object invoke(Object proxy, Method method, Object[] args) throws RuntimeException {
       if (method.getName().startsWith("get") || method.getName().equals("upRang") || method
         .getName().equals("toString")) {
-        return method.invoke(user, args);
+          try {
+              return method.invoke(user, args);
+          } catch (InvocationTargetException | IllegalAccessException e) {
+              throw new RuntimeException("InvocationTargetException", e);
+          }
       } else if (method.getName().startsWith("set")) {
-        throw new IllegalAccessException("You can't change not your's info");
+        throw new RuntimeException("You can't change not your's info");
       }
-    } catch (InvocationTargetException e) {
-      e.printStackTrace();
-    }
     //When we invoke another method, do nothing
     return null;
   }

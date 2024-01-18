@@ -1,7 +1,7 @@
 package Patterns.Structural.Proxy.Example.Virtual_proxy;
 
-import Structural.Proxy.Example.Virtual_proxy.DBConnection.DataBase;
-import Structural.Proxy.Example.Virtual_proxy.DBConnection.DataBaseProxy;
+import Patterns.Structural.Proxy.Example.Virtual_proxy.DBConnection.DataBase;
+import Patterns.Structural.Proxy.Example.Virtual_proxy.DBConnection.DataBaseProxy;
 
 //For Lazy loading
 public class Ex {

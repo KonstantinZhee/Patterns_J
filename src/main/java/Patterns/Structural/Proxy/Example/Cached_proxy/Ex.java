@@ -1,7 +1,7 @@
 package Patterns.Structural.Proxy.Example.Cached_proxy;
 
-import Structural.Proxy.Example.Cached_proxy.ImageLoader.ImageLoader;
-import Structural.Proxy.Example.Cached_proxy.ImageLoader.ImageLoaderProxy;
+import Patterns.Structural.Proxy.Example.Cached_proxy.ImageLoader.ImageLoader;
+import Patterns.Structural.Proxy.Example.Cached_proxy.ImageLoader.ImageLoaderProxy;
 
 public class Ex {
 
