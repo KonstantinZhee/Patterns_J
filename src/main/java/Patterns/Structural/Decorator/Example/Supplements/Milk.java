@@ -1,0 +1,24 @@
+package Patterns.Structural.Decorator.Example.Supplements;
+
+import Patterns.Structural.Decorator.Example.Products.Beverage;
+
+/*
+ *Concrete class decorator
+ */
+
+public class Milk extends SupplementsDecorator {
+
+  public Milk(Beverage beverage) {
+    super(beverage);
+  }
+
+  @Override
+  public String getDescription() {
+    return beverage.getDescription() + ", milk";
+  }
+
+  @Override
+  public double cost() {
+    return beverage.cost() + 0.10;
+  }
+}
